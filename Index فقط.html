@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عصفور للتعدين والحراريات | Asfour Mining &amp; Refractories</title>
+<meta name="description" content="شركة عصفور للتعدين والحراريات — رواد صناعة الحراريات والحلول التعدينية في مصر والشرق الأوسط منذ عام 1982.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#17140f;
+    --dark2:#231e17;
+    --ember:#e4590c;
+    --ember-soft:#f6c6a0;
+    --gold:#c99a3b;
+    --paper:#fbfaf8;
+    --paper-tint:#f2efe9;
+    --line:#e7e2d8;
+    --gray:#6f6a61;
+    --gray-light:#a39d90;
+    --white:#ffffff;
+    --shadow: 0 20px 50px -20px rgba(23,20,15,0.35);
+    --radius: 14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Tajawal', 'Cairo', sans-serif;
+    background:var(--paper);
+    color:var(--dark);
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.display{font-family:'Cairo', sans-serif;}
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+  .section{padding:110px 0;}
+  .section.tight{padding:90px 0;}
+  .dark-bg{background:var(--dark); color:var(--white);}
+  .tint-bg{background:var(--paper-tint);}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Cairo',sans-serif; font-weight:700; font-size:13px;
+    color:var(--ember); letter-spacing:.5px; margin-bottom:14px;
+  }
+  .eyebrow::before{content:""; width:22px; height:2px; background:var(--ember); display:inline-block;}
+  h2.title{font-size:clamp(28px,3.6vw,42px); font-weight:800; margin-bottom:18px; letter-spacing:-0.5px;}
+  .lead{font-size:17px; color:var(--gray); max-width:680px;}
+  .dark-bg .lead{color:var(--ember-soft);}
+
+  /* ---------- NAV ---------- */
+  header#topnav{
+    position:fixed; inset-inline:0; top:0; z-index:999;
+    background:rgba(23,20,15,0.92); backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    transition:.3s;
+  }
+  #topnav .wrap{display:flex; align-items:center; justify-content:space-between; height:74px; max-width:1280px;}
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand .mark{
+    width:38px; height:38px; border-radius:9px; background:var(--ember);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cairo',sans-serif; font-weight:900; color:#fff; font-size:13px;
+  }
+  .brand .txt{color:#fff; font-family:'Cairo',sans-serif; font-weight:800; font-size:16px;}
+  .brand .txt span{display:block; font-family:'Tajawal',sans-serif; font-weight:400; font-size:11px; color:var(--gray-light); letter-spacing:1px;}
+  nav.links{display:flex; gap:30px;}
+  nav.links a{color:#e9e5db; font-size:14px; font-weight:500; position:relative; padding:6px 0;}
+  nav.links a::after{content:""; position:absolute; bottom:0; right:0; width:0; height:2px; background:var(--ember); transition:.25s;}
+  nav.links a:hover::after{width:100%;}
+  .nav-cta{
+    background:var(--ember); color:#fff !important; padding:10px 20px; border-radius:30px;
+    font-family:'Cairo',sans-serif; font-weight:700; font-size:13px;
+  }
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer;}
+  .burger span{width:24px; height:2px; background:#fff;}
+
+  /* ---------- HERO ---------- */
+  #home{
+    position:relative; min-height:100vh; display:flex; align-items:center;
+    background:radial-gradient(1200px 600px at 85% -10%, rgba(228,89,12,0.25), transparent 60%),
+               radial-gradient(900px 500px at -10% 110%, rgba(228,89,12,0.15), transparent 60%),
+               var(--dark);
+    color:#fff; overflow:hidden;
+  }
+  #home::before{
+    content:""; position:absolute; inset:0;
+    background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 60px);
+    pointer-events:none;
+  }
+  .glow{position:absolute; border-radius:50%; filter:blur(70px); opacity:.55; animation:pulse 7s ease-in-out infinite;}
+  .glow.g1{width:420px; height:420px; background:var(--ember); top:-140px; left:-120px; animation-delay:0s;}
+  .glow.g2{width:320px; height:320px; background:var(--gold); bottom:-100px; right:-80px; animation-delay:2s;}
+  @keyframes pulse{0%,100%{transform:scale(1); opacity:.5;} 50%{transform:scale(1.15); opacity:.75;}}
+
+  .hero-inner{position:relative; z-index:2; text-align:center; width:100%; padding-top:74px;}
+  .hero-kicker{font-family:'Cairo',sans-serif; font-weight:700; color:var(--ember-soft); letter-spacing:3px; font-size:13px; margin-bottom:22px;}
+  .hero-inner h1{font-size:clamp(34px,6vw,64px); font-weight:900; line-height:1.25; margin-bottom:10px;}
+  .hero-inner .eng{font-family:'Cairo',sans-serif; letter-spacing:4px; color:var(--gray-light); font-size:15px; margin-bottom:26px;}
+  .hero-inner p.tag{max-width:640px; margin:0 auto 46px; color:#cfc9bd; font-size:18px;}
+  .stat-row{display:flex; justify-content:center; gap:0; flex-wrap:wrap; margin-top:10px;}
+  .stat-item{padding:0 36px; border-inline-start:1px solid rgba(255,255,255,0.12);}
+  .stat-item:first-child{border-inline-start:none;}
+  .stat-item .num{font-family:'Cairo',sans-serif; font-weight:900; font-size:34px; color:var(--ember);}
+  .stat-item .lbl{font-size:12.5px; color:var(--gray-light); margin-top:4px;}
+  .scroll-cue{position:absolute; bottom:28px; left:50%; transform:translateX(-50%); z-index:2;
+    color:var(--gray-light); font-size:11px; display:flex; flex-direction:column; align-items:center; gap:8px;}
+  .scroll-cue .line{width:1px; height:34px; background:linear-gradient(var(--ember), transparent); animation:down 1.8s infinite;}
+  @keyframes down{0%{opacity:0; transform:scaleY(0.4); transform-origin:top;} 40%{opacity:1; transform:scaleY(1); transform-origin:top;} 100%{opacity:0; transform:scaleY(1); transform-origin:bottom;}}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:none;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid; grid-template-columns:1.5fr 1fr; gap:50px; margin-top:50px; align-items:start;}
+  .about-grid p{color:var(--gray); margin-bottom:18px; font-size:15.5px;}
+  .fact-list{display:flex; flex-direction:column; gap:14px;}
+  .fact-card{
+    background:var(--dark); color:#fff; border-radius:var(--radius); padding:22px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:18px;
+    transition:.3s;
+  }
+  .fact-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
+  .fact-card .n{font-family:'Cairo',sans-serif; font-weight:900; font-size:26px; color:var(--ember);}
+  .fact-card .l{font-size:13px; color:var(--gray-light); text-align:left; max-width:170px;}
+
+  /* ---------- LEADERSHIP ---------- */
+  .lead-card{
+    background:var(--paper-tint); border-radius:20px; padding:60px; text-align:center; margin-top:40px;
+  }
+  .lead-card .mark{width:74px; height:74px; border-radius:50%; background:var(--dark); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:'Cairo',sans-serif; font-weight:900; margin:0 auto 26px;}
+  .lead-card h3{font-size:21px; margin-bottom:16px;}
+  .lead-card p{color:var(--gray); max-width:700px; margin:0 auto 20px; font-size:15px;}
+  .note{
+    border-top:1px dashed var(--line); margin-top:20px; padding-top:18px; font-size:12.5px;
+    color:var(--gray-light); font-style:italic; max-width:720px; margin-inline:auto;
+  }
+
+  /* ---------- VMV ---------- */
+  .vmv-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; margin-top:44px;}
+  .vmv-card{background:var(--dark2); border-radius:var(--radius); padding:34px 28px; text-align:center; transition:.3s;}
+  .vmv-card:hover{background:#2c261c;}
+  .vmv-card .dot{width:52px; height:52px; border-radius:50%; background:var(--ember); margin:0 auto 20px;}
+  .vmv-card h3{color:#fff; font-size:19px; margin-bottom:12px;}
+  .vmv-card p{color:var(--gray-light); font-size:13.5px;}
+  .culture-line{text-align:center; margin-top:36px; color:var(--ember-soft); font-style:italic; font-size:14px;}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{position:relative; margin-top:70px; padding-bottom:10px;}
+  .timeline .rail{position:absolute; top:50%; left:0; right:0; height:2px; background:var(--line);}
+  .tl-track{display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative;}
+  .tl-item{position:relative; padding:0 14px;}
+  .tl-item .card{background:var(--paper-tint); border-radius:12px; padding:22px; text-align:center;}
+  .tl-item.up .card{margin-bottom:56px;}
+  .tl-item.down .card{margin-top:56px;}
+  .tl-item .yr{font-family:'Cairo',sans-serif; font-weight:800; color:var(--ember); font-size:19px; margin-bottom:6px;}
+  .tl-item h4{font-size:15px; margin-bottom:8px;}
+  .tl-item p{font-size:12px; color:var(--gray);}
+  .tl-dot{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:14px; height:14px; border-radius:50%;
+    background:var(--ember); border:3px solid var(--paper); z-index:2;}
+
+  /* ---------- ORG CHART ---------- */
+  .org{margin-top:50px; text-align:center;}
+  .org .box{display:inline-block; padding:14px 26px; border-radius:10px; font-size:14px; font-weight:700; font-family:'Cairo',sans-serif;}
+  .org .board{background:var(--dark); color:#fff;}
+  .org .ceo{background:var(--ember); color:#fff; margin-top:26px;}
+  .org .connector{width:2px; height:26px; background:var(--line); margin:0 auto;}
+  .org-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:14px; margin-top:26px;}
+  .org-grid .dept{background:var(--paper-tint); border:1px solid var(--line); border-radius:10px; padding:16px 10px; font-size:12.5px; font-weight:600; position:relative;}
+  .org-grid .dept::before{content:""; position:absolute; top:-16px; left:50%; width:1px; height:16px; background:var(--line);}
+  .org-h{width:100%; height:1px; background:var(--line); margin:0 0 0;}
+
+  /* ---------- CARD GRIDS (activity/products/why) ---------- */
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:46px;}
+  .grid4{display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-top:46px;}
+  .card{
+    background:var(--paper-tint); border-radius:var(--radius); padding:28px; transition:.3s; position:relative;
+  }
+  .dark-bg .card{background:var(--dark2);}
+  .card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+  .card .icon{
+    width:46px; height:46px; border-radius:10px; background:var(--ember); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:'Cairo',sans-serif; font-weight:800; font-size:12px;
+    margin-bottom:16px;
+  }
+  .card.round .icon{border-radius:50%; width:56px; height:56px; margin:0 auto 16px;}
+  .card h3{font-size:16.5px; margin-bottom:10px;}
+  .dark-bg .card h3{color:#fff;}
+  .card p{font-size:13px; color:var(--gray);}
+  .dark-bg .card p{color:var(--gray-light);}
+  .card.center{text-align:center;}
+
+  /* sector icon grid */
+  .sector-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:46px;}
+  .sector-card{background:var(--paper-tint); border-radius:var(--radius); padding:30px 14px; text-align:center; transition:.3s;}
+  .sector-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+  .sector-card .badge{
+    width:60px; height:60px; border-radius:50%; background:var(--ember); color:#fff; margin:0 auto 16px;
+    display:flex; align-items:center; justify-content:center; font-family:'Cairo',sans-serif; font-weight:800; font-size:14px;
+  }
+  .sector-card h4{font-size:14px;}
+
+  /* capability stats */
+  .stat-cards{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:46px;}
+  .stat-cards .box{background:var(--dark2); border-radius:var(--radius); padding:32px 18px; text-align:center;}
+  .stat-cards .box .num{font-family:'Cairo',sans-serif; font-weight:900; font-size:30px; color:var(--ember); margin-bottom:8px;}
+  .stat-cards .box .lbl{font-size:12.5px; color:var(--gray-light);}
+  .quality-box{margin-top:50px; max-width:820px;}
+  .quality-box h3{color:#fff; font-size:19px; margin-bottom:14px;}
+  .quality-box p{color:var(--gray-light); font-size:14px; margin-bottom:14px;}
+  .quality-box .caveat{font-size:11.5px; color:var(--ember-soft); font-style:italic;}
+
+  /* global reach */
+  .global-grid{display:grid; grid-template-columns:1fr 1.1fr; gap:50px; margin-top:50px; align-items:center;}
+  .blob-wrap{position:relative; height:400px; background:var(--paper-tint); border-radius:20px; overflow:hidden;}
+  .blob{position:absolute; border-radius:50%; background:var(--ember); opacity:.12;}
+  .blob.b1{width:190px; height:190px; top:40px; left:40px;}
+  .blob.b2{width:260px; height:260px; bottom:20px; right:40px;}
+  .blob.b3{width:150px; height:150px; bottom:60px; left:110px;}
+  .center-num{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:120px; height:120px; border-radius:50%; background:var(--ember); color:#fff;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-family:'Cairo',sans-serif; box-shadow:0 20px 40px -12px rgba(228,89,12,0.5);
+  }
+  .center-num .n{font-weight:900; font-size:26px;}
+  .center-num .l{font-size:11px;}
+  .market-list{display:flex; flex-direction:column; gap:14px;}
+  .market-item{background:var(--paper-tint); border-radius:12px; padding:18px 22px; display:flex; align-items:center; gap:16px;}
+  .market-item .bar{width:5px; height:34px; background:var(--ember); border-radius:3px; flex-shrink:0;}
+  .market-item h4{font-size:14.5px; margin-bottom:4px;}
+  .market-item p{font-size:12px; color:var(--gray);}
+
+  /* why us */
+  .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px 30px; margin-top:50px;}
+  .why-item{display:flex; gap:16px;}
+  .why-item .num{
+    width:42px; height:42px; border-radius:50%; background:var(--ember); color:#fff; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-family:'Cairo',sans-serif; font-weight:800;
+  }
+  .why-item h4{color:#fff; font-size:15px; margin-bottom:6px;}
+  .why-item p{color:var(--gray-light); font-size:12.5px;}
+
+  /* departments */
+  .dept-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:46px;}
+  .dept-card{background:var(--paper-tint); border-radius:12px; padding:20px;}
+  .dept-card h4{font-size:14px; margin-bottom:8px;}
+  .dept-card p{font-size:11.5px; color:var(--gray);}
+
+  /* gallery */
+  .gal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:46px;}
+  .gal-card{
+    border:1.5px dashed var(--ember); border-radius:var(--radius); padding:40px 20px; text-align:center; background:var(--dark2);
+  }
+  .gal-card .ph{width:56px; height:56px; border-radius:50%; background:var(--ember); color:#fff; margin:0 auto 16px;
+    display:flex; align-items:center; justify-content:center; font-family:'Cairo',sans-serif; font-weight:800; font-size:12px;}
+  .gal-card h4{color:#fff; font-size:14px;}
+  .gal-note{margin-top:30px; text-align:center; font-size:12px; color:var(--ember-soft); font-style:italic; max-width:760px; margin-inline:auto;}
+
+  /* contact */
+  .contact-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:40px; margin-top:46px;}
+  .contact-rows{display:flex; flex-direction:column; gap:12px;}
+  .crow{background:var(--paper-tint); border-radius:10px; padding:18px 22px; display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap;}
+  .crow .k{color:var(--ember); font-weight:700; font-size:13.5px; font-family:'Cairo',sans-serif;}
+  .crow .v{font-size:13.5px; direction:ltr; text-align:left;}
+  .qr-box{background:var(--dark); border-radius:16px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:30px; color:#fff;}
+  .qr-box .qr{width:130px; height:130px; border:3px solid var(--ember); border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:'Cairo',sans-serif; font-weight:900; color:var(--ember); font-size:22px; margin-bottom:18px;}
+  .qr-box p{font-size:12px; color:var(--gray-light); text-align:center;}
+  .social-row{display:flex; gap:14px; margin-top:20px;}
+  .social-row a{
+    background:var(--dark); color:#fff; width:40px; height:40px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-family:'Cairo',sans-serif; font-weight:700;
+    transition:.3s;
+  }
+  .social-row a:hover{background:var(--ember);}
+
+  /* footer */
+  footer{background:var(--dark); color:var(--gray-light); padding:70px 0 30px; text-align:center;}
+  footer .mark{width:50px; height:50px; border-radius:12px; background:var(--ember); margin:0 auto 22px;
+    display:flex; align-items:center; justify-content:center; font-family:'Cairo',sans-serif; font-weight:900; color:#fff;}
+  footer h2{color:#fff; font-size:30px; margin-bottom:12px;}
+  footer .tag{color:var(--ember-soft); margin-bottom:26px;}
+  footer .divider{width:70px; height:2px; background:var(--ember); margin:0 auto 26px;}
+  footer .meta{font-size:13px; color:var(--gray-light);}
+  footer .sources{max-width:760px; margin:44px auto 0; text-align:right; border-top:1px solid rgba(255,255,255,0.08); padding-top:30px;}
+  footer .sources h5{color:#fff; font-size:13px; margin-bottom:14px; font-family:'Cairo',sans-serif;}
+  footer .sources ol{padding-inline-start:18px; list-style:decimal; font-size:11.5px; line-height:2;}
+  footer .sources .caveat{margin-top:18px; font-size:11px; font-style:italic; color:var(--gray-light);}
+  footer .bottom{margin-top:40px; font-size:11px; color:#5b564c;}
+
+  /* section subnav dots (progress) */
+  .backtotop{
+    position:fixed; bottom:26px; left:26px; z-index:998; width:44px; height:44px; border-radius:50%;
+    background:var(--ember); color:#fff; display:flex; align-items:center; justify-content:center;
+    opacity:0; pointer-events:none; transition:.3s; font-size:16px;
+  }
+  .backtotop.show{opacity:1; pointer-events:auto;}
+
+  @media(max-width:980px){
+    nav.links{display:none;}
+    .burger{display:flex;}
+    .about-grid, .global-grid, .contact-grid{grid-template-columns:1fr;}
+    .vmv-grid, .grid3{grid-template-columns:1fr 1fr;}
+    .grid4, .sector-grid, .stat-cards, .org-grid, .dept-grid, .gal-grid, .why-grid{grid-template-columns:1fr 1fr;}
+    .tl-track{grid-template-columns:1fr 1fr;}
+    .stat-row{gap:10px;}
+    .stat-item{padding:0 18px;}
+  }
+  @media(max-width:620px){
+    .vmv-grid, .grid3, .grid4, .sector-grid, .stat-cards, .org-grid, .dept-grid, .gal-grid, .why-grid, .tl-track{grid-template-columns:1fr;}
+    .tl-item.up .card, .tl-item.down .card{margin:0 0 20px;}
+    .timeline .rail{display:none;}
+    .tl-dot{display:none;}
+    .stat-item{border-inline-start:none; padding:10px 18px;}
+    .section{padding:70px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header id="topnav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">AMR</div>
+      <div class="txt">عصفور للتعدين والحراريات<span>ASFOUR MINING &amp; REFRACTORIES</span></div>
+    </div>
+    <nav class="links">
+      <a href="#about">من نحن</a>
+      <a href="#products">المنتجات</a>
+      <a href="#sectors">القطاعات</a>
+      <a href="#global">الانتشار العالمي</a>
+      <a href="#departments">الإدارات</a>
+      <a href="#contact" class="nav-cta">تواصل معنا</a>
+    </nav>
+    <div class="burger" onclick="document.querySelector('nav.links').classList.toggle('mobile-open')"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- ============ HOME ============ -->
+<section id="home">
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-kicker">رواد صناعة الحراريات منذ 1982</div>
+    <h1>شركة عصفور للتعدين<br>والحراريات</h1>
+    <div class="eng">ASFOUR MINING &amp; REFRACTORIES</div>
+    <p class="tag">حلول ومنتجات حرارية متكاملة لصناعات الحديد والصلب، الأسمنت، الأسمدة، السكر، السيراميك، والبتروكيماويات — في أكثر من 30 دولة حول العالم.</p>
+    <div class="stat-row">
+      <div class="stat-item"><div class="num">+30</div><div class="lbl">دولة حول العالم</div></div>
+      <div class="stat-item"><div class="num">+500</div><div class="lbl">موظف ومهندس وفني</div></div>
+      <div class="stat-item"><div class="num">100K+</div><div class="lbl">طن إنتاج سنوي</div></div>
+      <div class="stat-item"><div class="num">1982</div><div class="lbl">سنة التأسيس</div></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>مرر للأسفل</span><span class="line"></span></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <div class="wrap reveal">
+    <div class="eyebrow">من نحن</div>
+    <h2 class="title">نبذة عن الشركة</h2>
+    <p class="lead">من مورّد محلي للحراريات إلى مُصنّع إقليمي رائد بحضور في أكثر من 30 دولة.</p>
+    <div class="about-grid">
+      <div>
+        <p>تأسست الشركة عام 1982 تحت اسم "الشركة المصرية للحراريات"، لتكون المورد الرئيسي لمصر من مواد الحراريات لصناعتي الأسمنت والحديد والصلب سريعتي النمو آنذاك.</p>
+        <p>في عام 2007 استحوذت مجموعة عصفور على الشركة، وأعادت هيكلتها وطوّرت خطوطها الإنتاجية تحت اسم "عصفور للتعدين والحراريات"، لتتوسع في توريد المواد الخام والمنتجات والحلول الحرارية لأكثر من 10 قطاعات صناعية محليًا ودوليًا.</p>
+        <p>اليوم تُعد الشركة من بين أكبر مُصنّعي الحراريات في المنطقة، بطاقة إنتاجية تتجاوز 100,000 طن سنويًا، وحضور قوي في الأسواق الأوروبية مثل إسبانيا وإيطاليا وألمانيا والبرتغال وبولندا، وتوسع متنامٍ في الأسواق الآسيوية.</p>
+      </div>
+      <div class="fact-list">
+        <div class="fact-card"><div class="n">1982</div><div class="l">تأسيس الشركة</div></div>
+        <div class="fact-card"><div class="n">2007</div><div class="l">استحواذ عصفور وإعادة الهيكلة</div></div>
+        <div class="fact-card"><div class="n">+10</div><div class="l">قطاعات صناعية تخدمها الشركة</div></div>
+        <div class="fact-card"><div class="n">+30</div><div class="l">دولة حول العالم</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEADERSHIP ============ -->
+<section id="leadership" class="section tint-bg">
+  <div class="wrap reveal">
+    <div class="eyebrow">القيادة</div>
+    <h2 class="title">المؤسس ورئيس مجلس الإدارة</h2>
+    <div class="lead-card">
+      <div class="mark">AMR</div>
+      <h3>ملكية وقيادة عائلية بخبرة صناعية ممتدة</h3>
+      <p>تدير شركة عصفور للتعدين والحراريات مجموعةُ عصفور المصرية، التي قادت عملية استحواذ وتطوير الشركة منذ عام 2007. تعتمد الإدارة التنفيذية على فريق من المديرين والمهندسين ذوي الخبرة الطويلة في صناعة الحراريات، ملتزمين بشعار الشركة "الأعلى جودة، والأرقى خدمة".</p>
+      <div class="note">ملاحظة: لا تنشر الشركة سيرًا ذاتية تفصيلية للمؤسس أو رئيس مجلس الإدارة على موقعها الرسمي أو مصادرها العامة المتاحة؛ يُنصح بتزويد هذا القسم باسم وصورة ونبذة رسمية من الشركة مباشرة لإضافتها هنا بدقة.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISION MISSION VALUES ============ -->
+<section id="vmv" class="section dark-bg">
+  <div class="wrap reveal">
+    <div class="eyebrow">الهوية المؤسسية</div>
+    <h2 class="title">الرؤية والرسالة والقيم</h2>
+    <div class="vmv-grid">
+      <div class="vmv-card"><div class="dot"></div><h3>الرؤية</h3><p>أن نصبح أكبر مُصنّع للمواد الحرارية في المنطقة.</p></div>
+      <div class="vmv-card"><div class="dot"></div><h3>الرسالة</h3><p>تزويد عملائنا حول العالم بمنتجات وحلول حرارية عالية الجودة تلبي احتياجات صناعاتهم.</p></div>
+      <div class="vmv-card"><div class="dot"></div><h3>القيم</h3><p>الجودة أولًا، الالتزام بالعميل، الابتكار المستمر، والعمل بروح الفريق الواحد.</p></div>
+    </div>
+    <p class="culture-line">ثقافة العمل: بيئة صناعية آمنة قائمة على التدريب المستمر، والعمل الجماعي، والفخر بجودة "صنع في مصر".</p>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline" class="section">
+  <div class="wrap reveal">
+    <div class="eyebrow">المسيرة</div>
+    <h2 class="title">الخط الزمني للشركة</h2>
+    <div class="timeline">
+      <div class="rail"></div>
+      <div class="tl-track">
+        <div class="tl-item up">
+          <div class="card"><div class="yr">1982</div><h4>التأسيس</h4><p>إنشاء الشركة المصرية للحراريات لتوريد الحراريات لصناعتي الأسمنت والحديد والصلب.</p></div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item down">
+          <div class="tl-dot"></div>
+          <div class="card"><div class="yr">2007</div><h4>الاستحواذ</h4><p>استحواذ مجموعة عصفور على الشركة وتحويلها إلى "عصفور للتعدين والحراريات".</p></div>
+        </div>
+        <div class="tl-item up">
+          <div class="card"><div class="yr">2007+</div><h4>التوسع الصناعي</h4><p>تطوير خطوط الإنتاج وتوسيع المحفظة لأكثر من 10 قطاعات صناعية.</p></div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item down">
+          <div class="tl-dot"></div>
+          <div class="card"><div class="yr">اليوم</div><h4>انتشار عالمي</h4><p>تصدير المنتجات إلى أكثر من 30 دولة، مع حضور قوي في أوروبا وآسيا.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORG CHART ============ -->
+<section id="org" class="section tint-bg">
+  <div class="wrap reveal">
+    <div class="eyebrow">الحوكمة</div>
+    <h2 class="title">الهيكل التنظيمي</h2>
+    <div class="org">
+      <div class="box board">مجلس الإدارة</div>
+      <div class="connector"></div>
+      <div class="box ceo">الإدارة التنفيذية (CEO)</div>
+      <div class="org-grid">
+        <div class="dept">إدارة المالية</div>
+        <div class="dept">إدارة الموارد البشرية</div>
+        <div class="dept">إدارة المبيعات والتسويق</div>
+        <div class="dept">إدارة التصدير</div>
+        <div class="dept">إدارة المشتريات</div>
+        <div class="dept">إدارة الإنتاج</div>
+        <div class="dept">إدارة الجودة</div>
+        <div class="dept">إدارة البحث والتطوير</div>
+        <div class="dept">إدارة الصيانة</div>
+        <div class="dept">تكنولوجيا المعلومات</div>
+        <div class="dept">السلامة والصحة المهنية</div>
+        <div class="dept">المخازن واللوجستيات</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACTIVITY ============ -->
+<section id="activity" class="section">
+  <div class="wrap reveal">
+    <div class="eyebrow">أعمالنا</div>
+    <h2 class="title">نشاط الشركة</h2>
+    <div class="grid3">
+      <div class="card"><div class="icon">MFG</div><h3>تصنيع المواد الحرارية</h3><p>طوب حراري وخرسانات ومونة ومواد غير متشكلة بأنواعها.</p></div>
+      <div class="card"><div class="icon">FUR</div><h3>حلول الأفران الصناعية</h3><p>تصميم وتوريد منظومات حرارية متكاملة للأفران والقمائن.</p></div>
+      <div class="card"><div class="icon">RAW</div><h3>المواد الخام التعدينية</h3><p>كاولين مكلسن، بوكسيت مكلسن، شاموت بدرجات ونعومات متعددة.</p></div>
+      <div class="card"><div class="icon">INS</div><h3>خدمات التركيب والصيانة</h3><p>خدمة ما بعد البيع لتركيب المواد الحرارية وضمان أفضل أداء للأفران.</p></div>
+      <div class="card"><div class="icon">ENG</div><h3>الحلول الهندسية المتخصصة</h3><p>تصميم حلول مخصصة حسب متطلبات كل عميل وصناعة.</p></div>
+      <div class="card"><div class="icon">R&D</div><h3>البحث والتطوير</h3><p>قسم مخصص لتطوير المنتجات ورفع كفاءة المواد الحرارية.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section id="products" class="section dark-bg">
+  <div class="wrap reveal">
+    <div class="eyebrow">المحفظة الإنتاجية</div>
+    <h2 class="title">المنتجات الرئيسية</h2>
+    <div class="grid3">
+      <div class="card"><div class="icon">01</div><h3>الطوب الحراري</h3><p>طوب خفيف الوزن، طوب ألومينا كثيف (شاموتي وعالي الألومينا)، طوب كورديريت-موليت، وطوب مقاوم للأحماض.</p></div>
+      <div class="card"><div class="icon">02</div><h3>الخرسانات الحرارية</h3><p>خرسانات خفيفة، خرسانات منخفضة الأسمنت، وخرسانات تقليدية بدرجات ألومينا متعددة.</p></div>
+      <div class="card"><div class="icon">03</div><h3>الكاولين المكلسن</h3><p>شاموت بدرجات نقاء ونعومة مختلفة لصناعات الحراريات والسيراميك.</p></div>
+      <div class="card"><div class="icon">04</div><h3>المواد العازلة</h3><p>منتجات خفيفة الوزن وعازلة للحرارة لتقليل فقد الطاقة في الأفران.</p></div>
+      <div class="card"><div class="icon">05</div><h3>المواد الخام الحرارية</h3><p>بوكسيت مكلسن وشاموت خام يُورَّد لمصنعي الحراريات في مصر وأوروبا.</p></div>
+      <div class="card"><div class="icon">06</div><h3>الحلول الحرارية المتخصصة</h3><p>مونة حرارية، وخدمات تركيب متكاملة لضمان أفضل أداء تشغيلي.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTORS ============ -->
+<section id="sectors" class="section">
+  <div class="wrap reveal">
+    <div class="eyebrow">قطاعات العملاء</div>
+    <h2 class="title">القطاعات التي تخدمها الشركة</h2>
+    <div class="sector-grid">
+      <div class="sector-card"><div class="badge">Fe</div><h4>الحديد والصلب</h4></div>
+      <div class="sector-card"><div class="badge">Ce</div><h4>الأسمنت</h4></div>
+      <div class="sector-card"><div class="badge">Fz</div><h4>الأسمدة</h4></div>
+      <div class="sector-card"><div class="badge">Su</div><h4>السكر</h4></div>
+      <div class="sector-card"><div class="badge">Ca</div><h4>السيراميك والأدوات الصحية</h4></div>
+      <div class="sector-card"><div class="badge">Pc</div><h4>البتروكيماويات</h4></div>
+      <div class="sector-card"><div class="badge">Al</div><h4>الألومنيوم والمعادن غير الحديدية</h4></div>
+      <div class="sector-card"><div class="badge">Gl</div><h4>الزجاج والجير ومحطات الطاقة</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section id="capabilities" class="section dark-bg">
+  <div class="wrap reveal">
+    <div class="eyebrow">القدرات</div>
+    <h2 class="title">القدرات التصنيعية</h2>
+    <div class="stat-cards">
+      <div class="box"><div class="num">100K+</div><div class="lbl">طن طاقة إنتاجية سنوية</div></div>
+      <div class="box"><div class="num">500+</div><div class="lbl">موظف ومهندس وفني</div></div>
+      <div class="box"><div class="num">10+</div><div class="lbl">قطاعات صناعية تخدمها</div></div>
+      <div class="box"><div class="num">30+</div><div class="lbl">دولة حول العالم</div></div>
+    </div>
+    <div class="quality-box">
+      <h3>الجودة والمعايير</h3>
+      <p>تعمل الشركة وفق شعارها المعلن "الأعلى جودة، والأرقى خدمة"، عبر ضبط جودة صارم لخامات الشاموت والبوكسيت المكلسن ومنتجات الطوب والخرسانات الحرارية، ومختبرات فحص داخلية، وخدمة ما بعد بيع تشمل الإشراف على التركيب لضمان أفضل أداء تشغيلي للأفران والقمائن الصناعية.</p>
+      <p class="caveat">* لم يتم العثور على أرقام شهادات جودة دولية منشورة رسميًا (مثل ISO) في المصادر العامة المتاحة؛ يُنصح بتأكيدها من الشركة قبل تضمينها في عروض رسمية.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GLOBAL REACH ============ -->
+<section id="global" class="section tint-bg">
+  <div class="wrap reveal">
+    <div class="eyebrow">الحضور العالمي</div>
+    <h2 class="title">الانتشار العالمي</h2>
+    <div class="global-grid">
+      <div class="blob-wrap">
+        <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+        <div class="center-num"><div class="n">+30</div><div class="l">دولة</div></div>
+      </div>
+      <div class="market-list">
+        <div class="market-item"><div class="bar"></div><div><h4>مصر والشرق الأوسط</h4><p>السوق المحلي الرئيسي ومركز التصنيع في حلوان</p></div></div>
+        <div class="market-item"><div class="bar"></div><div><h4>أوروبا</h4><p>إسبانيا، إيطاليا، ألمانيا، البرتغال، وبولندا</p></div></div>
+        <div class="market-item"><div class="bar"></div><div><h4>أفريقيا</h4><p>توريد مواد ومنتجات حرارية لصناعات الأسمنت والصلب</p></div></div>
+        <div class="market-item"><div class="bar"></div><div><h4>آسيا</h4><p>سوق ناشئ تعمل الشركة على تنمية حصتها فيه</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section id="why" class="section dark-bg">
+  <div class="wrap reveal">
+    <div class="eyebrow">الميزة التنافسية</div>
+    <h2 class="title">لماذا شركة عصفور؟</h2>
+    <div class="why-grid">
+      <div class="why-item"><div class="num">1</div><div><h4>خبرة طويلة</h4><p>أكثر من 40 عامًا من الخبرة الصناعية منذ 1982.</p></div></div>
+      <div class="why-item"><div class="num">2</div><div><h4>جودة عالية</h4><p>شعار "الأعلى جودة والأرقى خدمة" في كل منتج.</p></div></div>
+      <div class="why-item"><div class="num">3</div><div><h4>ابتكار مستمر</h4><p>قسم بحث وتطوير مخصص لتحسين المنتجات.</p></div></div>
+      <div class="why-item"><div class="num">4</div><div><h4>قدرة إنتاجية كبيرة</h4><p>أكثر من 100,000 طن سنويًا من الحراريات.</p></div></div>
+      <div class="why-item"><div class="num">5</div><div><h4>خدمة عملاء متكاملة</h4><p>دعم فني وخدمات تركيب وصيانة ما بعد البيع.</p></div></div>
+      <div class="why-item"><div class="num">6</div><div><h4>انتشار دولي</h4><p>تصدير لأكثر من 30 دولة في أوروبا وآسيا وأفريقيا.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPARTMENTS ============ -->
+<section id="departments" class="section">
+  <div class="wrap reveal">
+    <div class="eyebrow">الإدارات</div>
+    <h2 class="title">الإدارات والأقسام</h2>
+    <div class="dept-grid">
+      <div class="dept-card"><h4>الإدارة المالية</h4><p>إدارة الموازنات والتدفقات النقدية والتقارير المالية.</p></div>
+      <div class="dept-card"><h4>الموارد البشرية</h4><p>التوظيف والتدريب وتطوير الكفاءات والعلاقات الوظيفية.</p></div>
+      <div class="dept-card"><h4>المبيعات والتسويق</h4><p>بناء العلاقات مع العملاء وتنمية المبيعات محليًا.</p></div>
+      <div class="dept-card"><h4>إدارة التصدير</h4><p>إدارة الشحنات الدولية والامتثال الجمركي للأسواق الخارجية.</p></div>
+      <div class="dept-card"><h4>إدارة المشتريات</h4><p>توريد المواد الخام والمعدات بأفضل تكلفة وجودة.</p></div>
+      <div class="dept-card"><h4>إدارة الإنتاج</h4><p>تشغيل خطوط تصنيع الطوب والخرسانات والمواد الخام.</p></div>
+      <div class="dept-card"><h4>إدارة الجودة</h4><p>ضبط الجودة واختبار المواد وفق معايير الصناعة.</p></div>
+      <div class="dept-card"><h4>البحث والتطوير</h4><p>تطوير تركيبات ومنتجات حرارية جديدة ومحسّنة.</p></div>
+      <div class="dept-card"><h4>إدارة الصيانة</h4><p>صيانة خطوط الإنتاج والمعدات الصناعية دوريًا.</p></div>
+      <div class="dept-card"><h4>تكنولوجيا المعلومات</h4><p>دعم الأنظمة الرقمية وتخطيط موارد المؤسسة (ERP).</p></div>
+      <div class="dept-card"><h4>السلامة والصحة المهنية</h4><p>تطبيق معايير السلامة داخل المصنع والمخازن.</p></div>
+      <div class="dept-card"><h4>المخازن واللوجستيات</h4><p>إدارة المخزون والنقل الداخلي والخارجي للمنتجات.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="section dark-bg">
+  <div class="wrap reveal">
+    <div class="eyebrow">لمحة بصرية</div>
+    <h2 class="title">معرض الصور</h2>
+    <div class="gal-grid">
+      <div class="gal-card"><div class="ph">IMG</div><h4>المصنع</h4></div>
+      <div class="gal-card"><div class="ph">IMG</div><h4>خطوط الإنتاج</h4></div>
+      <div class="gal-card"><div class="ph">IMG</div><h4>المنتجات</h4></div>
+      <div class="gal-card"><div class="ph">IMG</div><h4>المشاريع</h4></div>
+      <div class="gal-card"><div class="ph">IMG</div><h4>العاملون</h4></div>
+      <div class="gal-card"><div class="ph">IMG</div><h4>المعارض والفعاليات</h4></div>
+    </div>
+    <p class="gal-note">* هذا القسم مُجهّز كقالب لإدراج صور فعلية من المصنع وخطوط الإنتاج والفعاليات؛ استبدل بطاقة IMG بوسم &lt;img src="..."&gt; بصورة رسمية من الشركة.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+  <div class="wrap reveal">
+    <div class="eyebrow">تواصل معنا</div>
+    <h2 class="title">وسائل التواصل</h2>
+    <div class="contact-grid">
+      <div class="contact-rows">
+        <div class="crow"><span class="k">الموقع الإلكتروني</span><span class="v">asfourmr.com</span></div>
+        <div class="crow"><span class="k">البريد الإلكتروني</span><span class="v">sales@asfourmr.com&nbsp;|&nbsp;sales.europe@asfourmr.com</span></div>
+        <div class="crow"><span class="k">الهاتف</span><span class="v">025 444 674 / 696 / 053 (2 20+)</span></div>
+        <div class="crow"><span class="k">عنوان المصنع</span><span class="v" style="direction:rtl; text-align:right;">كورنيش النيل، الطبين، حلوان، مصر — ص.ب 47 حلوان</span></div>
+        <div class="crow"><span class="k">لينكدإن</span><span class="v">linkedin.com/company/asfour-for-mining-and-refractories</span></div>
+        <div class="social-row">
+          <a href="https://asfourmr.com" target="_blank" rel="noopener">WEB</a>
+          <a href="https://www.linkedin.com/company/asfour-for-mining-and-refractories" target="_blank" rel="noopener">in</a>
+          <a href="https://www.facebook.com/ASFOURMR" target="_blank" rel="noopener">FB</a>
+        </div>
+      </div>
+      <div class="qr-box">
+        <div class="qr">QR</div>
+        <p>امسح الرمز لزيارة الموقع الرسمي<br><span style="font-size:11px; opacity:.7;">(عنصر تصميم نائب — استبدله برمز QR فعلي)</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="closing">
+  <div class="wrap">
+    <div class="mark">AMR</div>
+    <h2>شكرًا لكم</h2>
+    <p class="tag">نتطلع للشراكة معكم في بناء مستقبل الصناعات الحرارية</p>
+    <div class="divider"></div>
+    <div class="meta">asfourmr.com &nbsp;|&nbsp; sales@asfourmr.com &nbsp;|&nbsp; حلوان، مصر</div>
+
+    <div class="sources">
+      <h5>المصادر والمراجع</h5>
+      <ol>
+        <li>الموقع الرسمي للشركة: asfourmr.com — صفحات About Us وContact Us وSectors وProducts وR&amp;D.</li>
+        <li>صفحة الشركة على LinkedIn: linkedin.com/company/asfour-for-mining-and-refractories</li>
+        <li>صفحة الشركة على Facebook: facebook.com/ASFOURMR</li>
+        <li>ملف تعريفي (Company Profile) منشور عبر شريك صناعي: ecrg.de</li>
+        <li>صفحة شريك تعديني أوروبي يذكر عصفور كمورّد: cofermin.de</li>
+      </ol>
+      <p class="caveat">تنويه: تم إعداد هذه الصفحة بالبحث في المصادر العامة المتاحة عبر الإنترنت. بعض التفاصيل (مثل أسماء وسير المؤسس/رئيس مجلس الإدارة، شهادات الجودة الدولية، وصور المصنع الفعلية) غير متاحة علنًا وتحتاج تزويدًا من الشركة مباشرة لضمان الدقة الكاملة قبل الاستخدام أمام مستثمرين أو شركاء.</p>
+    </div>
+    <div class="bottom">© 2026 Asfour Mining &amp; Refractories — هذه صفحة غير رسمية مُعدّة كعرض تقديمي، وليست الموقع الرسمي للشركة.</div>
+  </div>
+</footer>
+
+<div class="backtotop" id="backtotop">↑</div>
+
+<script>
+  // reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  reveals.forEach(el=>io.observe(el));
+
+  // back to top
+  const btt = document.getElementById('backtotop');
+  window.addEventListener('scroll', ()=>{
+    btt.classList.toggle('show', window.scrollY > 700);
+  });
+  btt.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+  // mobile nav toggle style injection
+  const style = document.createElement('style');
+  style.textContent = `
+    nav.links.mobile-open{
+      display:flex !important; position:fixed; top:74px; right:0; left:0; background:var(--dark);
+      flex-direction:column; padding:20px 28px; gap:18px; border-top:1px solid rgba(255,255,255,0.08);
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+</body>
+</html>
